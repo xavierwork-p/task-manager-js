@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <!-- Configuración de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Hace que el diseño sea responsive en móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Título de la pestaña -->
+  <title>Task Manager</title>
+
+  <!-- Conexión con el archivo CSS -->
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+
+  <!-- Contenedor principal de la aplicación -->
+  <div class="container">
+
+    <!-- Título principal -->
+    <h1>Task Manager</h1>
+
+    <!-- Sección para agregar tareas -->
+    <div class="input-section">
+
+      <!-- Input donde el usuario escribe la tarea -->
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Nueva tarea..."
+      />
+
+      <!-- Botón para agregar tareas -->
+      <button id="addBtn">
+        Agregar
+      </button>
+
+    </div>
+
+    <!-- Botones para filtrar tareas -->
+    <div class="filters">
+
+      <!-- Mostrar todas las tareas -->
+      <button
+        class="filter-btn active"
+        data-filter="all"
+      >
+        Todas
+      </button>
+
+      <!-- Mostrar tareas pendientes -->
+      <button
+        class="filter-btn"
+        data-filter="pending"
+      >
+        Pendientes
+      </button>
+
+      <!-- Mostrar tareas completadas -->
+      <button
+        class="filter-btn"
+        data-filter="completed"
+      >
+        Completadas
+      </button>
+
+    </div>
+
+    <!-- Lista donde se insertan las tareas dinámicamente -->
+    <ul id="taskList"></ul>
+
+    <!-- Contador de tareas pendientes -->
+    <p id="taskCount"></p>
+
+  </div>
+
+  <!-- Conexión con JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
